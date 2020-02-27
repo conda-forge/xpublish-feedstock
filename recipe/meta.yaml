@@ -1,5 +1,5 @@
 {% set name = "xpublish" %}
-{% set version = "0.0.1" %}
+{% set version = "0.0.2" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 89d04cb0ff3a68c65ddf4c8f3400030e754b99edb0b4e615cad8f453b3435564
+  sha256: 0707933f0034f208639d0abd3a9b55ad44e70c4fc85091db9d4468ad58721a2e
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -30,6 +30,10 @@ requirements:
     - uvicorn
 
 test:
+  # requires:
+  #   - pip
+  # commands:
+  #   - pip check
   imports:
     - xpublish
 
@@ -38,7 +42,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Publish Xarray Datasets via a Zarr compatible REST API'
+  summary: Publish Xarray Datasets via a Zarr compatible REST API
   description: |
     Xpublish lets you publish Xarray datasets via a Zarr-compatible REST API.
     On the server-side, datasets are published using a simple Xarray accessor
