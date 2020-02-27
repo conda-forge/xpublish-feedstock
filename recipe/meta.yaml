@@ -30,6 +30,10 @@ requirements:
     - uvicorn
 
 test:
+  requires:
+    - pip
+  commands:
+    - pip check
   imports:
     - xpublish
 
