@@ -1,5 +1,5 @@
 {% set name = "xpublish" %}
-{% set version = "0.0.2" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 0707933f0034f208639d0abd3a9b55ad44e70c4fc85091db9d4468ad58721a2e
+  sha256: fb31b2937a80f607dd7d1e5739a5137ca7ed6de5211fe3ec9c1ded0d89b3486a
 
 build:
   noarch: python
@@ -21,13 +21,14 @@ requirements:
     - setuptools_scm
   run:
     - python >=3.6
-    - xarray
+    - xarray >=0.16
     - dask
     - toolz
     - zarr
     - numcodecs
-    - fastapi
+    - fastapi >=0.59
     - uvicorn
+    - cachey
 
 test:
   # requires:
@@ -38,17 +39,18 @@ test:
     - xpublish
 
 about:
-  home: https://github.com/jhamman/xarray
+  home: https://xpublish.readthedocs.io
   license: MIT
   license_family: MIT
   license_file: LICENSE
   summary: Publish Xarray Datasets via a Zarr compatible REST API
   description: |
-    Xpublish lets you publish Xarray datasets via a Zarr-compatible REST API.
-    On the server-side, datasets are published using a simple Xarray accessor
-    and on the client-side, datasets are accessed using Zarr and fsspec.
+    Xpublish lets you serve, share and publish Xarray Datasets via a web application.
+    The data and/or metadata in the Xarray Datasets can be exposed in various forms
+    through pluggable REST API endpoints. Efficient, on-demand delivery of large
+    datasets may be enabled with Dask on the server-side.
   doc_url: https://xpublish.readthedocs.io/
-  dev_url: https://github.com/jhamman/xpublish
+  dev_url: https://github.com/xarray-contrib/xpublish
 extra:
   recipe-maintainers:
     - jhamman

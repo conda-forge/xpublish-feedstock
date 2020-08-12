@@ -1,17 +1,18 @@
 About xpublish
 ==============
 
-Home: https://github.com/jhamman/xarray
+Home: https://xpublish.readthedocs.io
 
 Package license: MIT
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: Publish Xarray Datasets via a Zarr compatible REST API
 
-Xpublish lets you publish Xarray datasets via a Zarr-compatible REST API.
-On the server-side, datasets are published using a simple Xarray accessor
-and on the client-side, datasets are accessed using Zarr and fsspec.
+Xpublish lets you serve, share and publish Xarray Datasets via a web application.
+The data and/or metadata in the Xarray Datasets can be exposed in various forms
+through pluggable REST API endpoints. Efficient, on-demand delivery of large
+datasets may be enabled with Dask on the server-side.
 
 
 Current build status
