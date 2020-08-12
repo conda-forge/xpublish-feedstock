@@ -28,6 +28,7 @@ requirements:
     - numcodecs
     - fastapi >=0.59
     - uvicorn
+    - cachey
 
 test:
   # requires:
