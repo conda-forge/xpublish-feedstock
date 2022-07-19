@@ -3,7 +3,7 @@ About xpublish
 
 Home: https://xpublish.readthedocs.io
 
-Package license: MIT
+Package license: Apache-2.0
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/xpublish-feedstock/blob/main/LICENSE.txt)
 
