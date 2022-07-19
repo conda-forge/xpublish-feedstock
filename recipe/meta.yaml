@@ -40,8 +40,8 @@ test:
 
 about:
   home: https://xpublish.readthedocs.io
-  license: MIT
-  license_family: MIT
+  license: Apache-2.0
+  license_family: Apache
   license_file: LICENSE
   summary: Publish Xarray Datasets via a Zarr compatible REST API
   description: |
