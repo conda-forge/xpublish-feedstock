@@ -22,20 +22,21 @@ requirements:
     - setuptools-scm >=3.4
   run:
     - python >=3.8
-    - xarray >=0.16
-    - dask
-    - toolz
-    - zarr
-    - numcodecs
-    - fastapi >=0.59
-    - uvicorn
     - cachey
+    - dask
+    - fastapi >=0.59
+    - numcodecs
+    - numpy >=1.17
+    - toolz
+    - uvicorn
+    - xarray >=0.16
+    - zarr
 
 test:
-  # requires:
-  #   - pip
-  # commands:
-  #   - pip check
+  requires:
+    - pip
+  commands:
+    - pip check
   imports:
     - xpublish
 
