@@ -17,19 +17,20 @@ build:
 requirements:
   host:
     - python >=3.8
-    - pip
-    - setuptools >=42
     - setuptools-scm >=3.4
+    - setuptools >=42
+    - pip
   run:
     - python >=3.8
     - cachey
-    - dask
-    - fastapi >=0.59
+    - dask-core
+    - fastapi
     - numcodecs
-    - numpy >=1.17
+    - numpy
+    - pluggy
     - toolz
     - uvicorn
-    - xarray >=0.16
+    - xarray
     - zarr
 
 test:
@@ -57,3 +58,4 @@ extra:
   recipe-maintainers:
     - jhamman
     - andersy005
+    - ocefpaf
