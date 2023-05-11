@@ -56,6 +56,7 @@ about:
   dev_url: https://github.com/xarray-contrib/xpublish
 extra:
   recipe-maintainers:
-    - jhamman
+    - abkfenris
     - andersy005
+    - jhamman
     - ocefpaf
