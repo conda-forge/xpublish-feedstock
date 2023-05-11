@@ -1,5 +1,5 @@
 {% set name = "xpublish" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: da221ef83c51d660c13f95883121f1b82d39b3d7e83c7d2c46cf9f6e4edd372b
+  sha256: 90a0eff3362b8c573d707ee4e469d720d7abdcce2b2b9f6fa44951e6f312439e
 
 build:
   noarch: python
