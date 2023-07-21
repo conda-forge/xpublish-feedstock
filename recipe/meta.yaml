@@ -11,20 +11,20 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.8
-    - setuptools-scm >=3.4
+    - python >=3.9
     - setuptools >=42
+    - setuptools-scm >=6.2
     - pip
   run:
-    - python >=3.8
+    - python >=3.9
     - cachey
     - dask-core
-    - fastapi
+    - fastapi >=0.78.0
     - numcodecs
     - numpy
     - pluggy
