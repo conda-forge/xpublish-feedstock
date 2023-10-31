@@ -31,7 +31,7 @@ requirements:
     - toolz
     - uvicorn
     # see https://github.com/xpublish-community/xpublish/issues/237
-    - xarray !=v2023.09.0
+    - xarray !=2023.09.0
     - zarr
 
 test:
