@@ -30,7 +30,7 @@ requirements:
     - pluggy
     - toolz
     - uvicorn
-    - xarray
+    - xarray !=v2023.09.0
     - zarr
 
 test:
