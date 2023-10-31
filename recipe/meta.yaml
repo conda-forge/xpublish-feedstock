@@ -1,5 +1,5 @@
 {% set name = "xpublish" %}
-{% set version = "0.3.2" %}
+{% set version = "0.3.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 9e938e2fb2f55f1c8e51646c0b2c79d0c5730001695145a524f815900c6e6259
+  sha256: 4c11c8e42847670fdfab2fc35b37ff86ed5849974f40af7abf9f4578f00e9110
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
@@ -30,7 +30,8 @@ requirements:
     - pluggy
     - toolz
     - uvicorn
-    - xarray
+    # see https://github.com/xpublish-community/xpublish/issues/237
+    - xarray !=2023.09.0
     - zarr
 
 test:
