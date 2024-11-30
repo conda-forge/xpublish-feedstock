@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 4c11c8e42847670fdfab2fc35b37ff86ed5849974f40af7abf9f4578f00e9110
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.9
+    - python {{ python_min }}
     - setuptools >=42
     - setuptools-scm >=6.2
     - pip
   run:
-    - python >=3.9
+    - python >={{ python_min }}
     - cachey
     - dask-core
     - fastapi >=0.78.0
@@ -37,6 +37,7 @@ requirements:
 test:
   requires:
     - pip
+    - python {{ python_min }}
   commands:
     - pip check
   imports:
