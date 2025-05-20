@@ -1,3 +1,4 @@
+{% set python_min = "3.11" %}
 {% set name = "xpublish" %}
 {% set version = "0.4.1" %}
 
@@ -12,7 +13,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
 requirements:
   host:
@@ -24,13 +25,13 @@ requirements:
     - python >={{ python_min }}
     - cachey
     - dask-core
-    - fastapi >=0.78.0
+    - fastapi >=0.115.0
     - numcodecs
     - numpy
     - pluggy
+    - pydantic >=2.5.0
     - toolz
     - uvicorn
-    # see https://github.com/xpublish-community/xpublish/issues/237
     - xarray >=2025.1.0
     - zarr >=3.0.7
 
